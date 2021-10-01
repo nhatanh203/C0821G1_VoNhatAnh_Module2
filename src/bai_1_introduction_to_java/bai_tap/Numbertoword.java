@@ -2,7 +2,7 @@ package bai_1_introduction_to_java.bai_tap;
 
 import java.util.Scanner;
 
-public class docso_thanhchu {
+public class Numbertoword {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập 1 số : ");

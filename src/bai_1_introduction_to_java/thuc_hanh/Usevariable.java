@@ -1,6 +1,6 @@
 package bai_1_introduction_to_java.thuc_hanh;
 
-public class khaibao_sudungbien {
+public class Usevariable {
     public static void main(String[] args) {
         int i = 10;
         float f = 20.5f;

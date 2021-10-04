@@ -2,7 +2,7 @@ package bai_1_introduction_to_java.thuc_hanh;
 
 import java.util.Scanner;
 
-public class Yeartest {
+public class YearTest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int year;

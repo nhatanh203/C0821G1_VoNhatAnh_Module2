@@ -25,6 +25,7 @@ public class AddElementToArray {
             }
             newArr[indexElement] = addElement;
         }
+//        Phương thức toString() trả về chuỗi đại diện của đối tượng.
         System.out.println("Mảng sau khi được thêm : " + Arrays.toString(newArr));
     }
 }

@@ -2,6 +2,7 @@ package bai_2_loop_statement.bai_tap;
 
 public class PrimeNumbers {
     public static void main(String[] args) {
+//        math.sqrt : Tính căn bậc hai của số chỉ định
         for (int num = 1; num < 100; ++num) {
             int count = 0;
             for (int i = 2; i <= Math.sqrt(num); i++) {

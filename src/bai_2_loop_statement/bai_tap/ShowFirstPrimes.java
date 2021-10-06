@@ -1,10 +1,8 @@
 package bai_2_loop_statement.bai_tap;
 
-import java.util.Scanner;
-
 public class ShowFirstPrimes {
     public static void main(String[] args) {
-        int number, count = 0;
+        int count = 0;
         int status = 1;
         int num = 3;
         System.out.println("The first 20 primes are : ");

@@ -1,4 +1,4 @@
-package bai_3_class_object_in_java.thuc_hanh;
+package bai_4_class_object_in_java.thuc_hanh;
 
 import java.util.Scanner;
 

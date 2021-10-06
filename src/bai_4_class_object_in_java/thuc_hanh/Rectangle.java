@@ -1,4 +1,4 @@
-package bai_3_class_object_in_java.thuc_hanh;
+package bai_4_class_object_in_java.thuc_hanh;
 
 public class Rectangle {
     double width, height;

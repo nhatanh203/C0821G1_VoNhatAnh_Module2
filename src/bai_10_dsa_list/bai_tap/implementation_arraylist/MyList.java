@@ -19,7 +19,7 @@ public class MyList<E> {
         if (capacity >= 0) {
             elements = new Object[capacity];
         } else {
-            System.out.println("capacity không hợp lệ !");
+            System.err.println("capacity không hợp lệ !");
         }
     }
 
@@ -49,7 +49,7 @@ public class MyList<E> {
     //Phương thức thêm 1 phần tử vào vị trí
     public void add(E element, int index) {
         if (index > elements.length) {
-            System.out.println("index không hợp lệ !");
+            System.err.println("index không hợp lệ !");
         } else if (elements.length == size) {
             this.ensureCapacity(5);
         }
@@ -71,7 +71,7 @@ public class MyList<E> {
             int newSize = this.elements.length + minCapacity;
             elements = Arrays.copyOf(elements, newSize);
         } else {
-            System.out.println("minCapacity không hợp lệ !");
+            System.err.println("minCapacity không hợp lệ !");
         }
     }
 
@@ -107,7 +107,7 @@ public class MyList<E> {
     //Phương thức xoá 1 phần tử tại vị trí index
     public E remove(int index) {
         if (index < 0 || index > elements.length) {
-            System.out.println("index không hợp lệ !");
+            System.err.println("index không hợp lệ !");
         }
         E element = (E) elements[index];
         for (int i = index; i < size - 1; i++) {

@@ -1,15 +1,14 @@
 package case_study.controllers;
 
 import case_study.service.*;
-import case_study.service.impl.CustomerServiceImp;
-import case_study.service.impl.EmployeeServiceImp;
-import case_study.service.impl.FacilityServiceImp;
+import case_study.service.impl.*;
 
 import java.util.Scanner;
 
 public class FuramaController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        CheckBug checkBug = new CheckBug();
         EmployeeService emplSer = new EmployeeServiceImp();
         CustomerService custSer = new CustomerServiceImp();
         FacilityService faciSer = new FacilityServiceImp();
@@ -23,7 +22,7 @@ public class FuramaController {
             System.out.println("5. Promotion Management");
             System.out.println("6. Exit");
             System.out.print("Choose service here, please : ");
-            switchCs = Integer.parseInt(scanner.nextLine());
+            switchCs = checkBug.checkNum();
             switch (switchCs) {
                 case 1:
                     do {
@@ -33,7 +32,7 @@ public class FuramaController {
                         System.out.println("3. Edit employee");
                         System.out.println("4. Return main menu");
                         System.out.print("Choose service here, please : ");
-                        switchCs = Integer.parseInt(scanner.nextLine());
+                        switchCs = checkBug.checkNum();
                         switch (switchCs) {
                             case 1:
                                 emplSer.display();
@@ -55,7 +54,7 @@ public class FuramaController {
                         System.out.println("3. Edit customer");
                         System.out.println("4. Return main menu");
                         System.out.print("Choose service here, please : ");
-                        switchCs = Integer.parseInt(scanner.nextLine());
+                        switchCs = checkBug.checkNum();
                         switch (switchCs) {
                             case 1:
                                 custSer.display();
@@ -78,7 +77,7 @@ public class FuramaController {
                         System.out.println("3. Display list facility maintenance");
                         System.out.println("4. Return main menu");
                         System.out.print("Choose service here, please : ");
-                        switchCs = Integer.parseInt(scanner.nextLine());
+                        switchCs = checkBug.checkNum();
                         switch (switchCs) {
                             case 1: faciSer.display();
                                 break;
@@ -89,7 +88,7 @@ public class FuramaController {
                                     System.out.println("3. Add new Room ");
                                     System.out.println("4. Return main menu");
                                     System.out.print("Choose service here, please : ");
-                                    switchCs2 = Integer.parseInt(scanner.nextLine());
+                                    switchCs2 = checkBug.checkNum();
                                     switch (switchCs2) {
                                         case 1: faciSer.addVilla();
                                             break;
@@ -116,7 +115,7 @@ public class FuramaController {
                         System.out.println("5. Edit contracts");
                         System.out.println("6. Return main menu");
                         System.out.print("Choose service here, please : ");
-                        switchCs1 = Integer.parseInt(scanner.nextLine());
+                        switchCs1 = checkBug.checkNum();
                         switch (switchCs1) {
                             case 1:
                                 break;
@@ -138,7 +137,7 @@ public class FuramaController {
                         System.out.println("2. Display list customers get voucher");
                         System.out.println("3. Return main menu");
                         System.out.print("Choose service here, please : ");
-                        switchCs = Integer.parseInt(scanner.nextLine());
+                        switchCs = checkBug.checkNum();
                         switch (switchCs) {
                             case 1:
                                 break;

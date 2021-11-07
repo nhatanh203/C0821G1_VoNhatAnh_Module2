@@ -11,21 +11,23 @@ public class CustomerServiceImp implements CustomerService {
     Scanner scanner = new Scanner(System.in);
     public static List<Customer> customList = new ArrayList<>();
     ReadWriteFile readWrite = new ReadWriteFile();
+    CheckBug checkBug = new CheckBug();
+    CheckInputImp checkInput = new CheckInputImp();
 
     @Override
     public void add() {
         System.out.print("Nhập mã khách hàng : ");
-        int id = Integer.parseInt(scanner.nextLine());
+        int id = checkBug.checkNum();
         System.out.print("Nhập tên của khách hàng : ");
         String name = scanner.nextLine();
-        System.out.print("Nhập năm sinh của khách hàng : ");
-        int birthDay = Integer.parseInt(scanner.nextLine());
+        System.out.print("Nhập ngày sinh của khách hàng : ");
+        String birthDay = checkInput.checkBirthday();
         System.out.print("Nhập giới tính của khách hàng : ");
         String gender = scanner.nextLine();
         System.out.print("Nhập số chứng minh nhân dân của khách hàng : ");
-        int identityNum = Integer.parseInt(scanner.nextLine());
+        int identityNum = checkBug.checkNum();
         System.out.print("Nhập số điện thoại của khách hàng : ");
-        int phoneNum = Integer.parseInt(scanner.nextLine());
+        int phoneNum = checkBug.checkNum();
         System.out.print("Nhập email của khách hàng : ");
         String mail = scanner.nextLine();
         System.out.print("Nhập loại của khách hàng : ");
@@ -49,29 +51,29 @@ public class CustomerServiceImp implements CustomerService {
     @Override
     public void edit() {
         System.out.print("Nhập vào mã khách hàng : ");
-        int codeId = Integer.parseInt(scanner.nextLine());
+        int codeId = checkBug.checkNum();
         boolean check = false;
         int size = customList.size();
         for (int i = 0; i < size; i++) {
             if (customList.get(i).getId() == codeId) {
                 check = true;
                 System.out.print("Nhập id muốn sửa : ");
-                int id = Integer.parseInt(scanner.nextLine());
+                int id = checkBug.checkNum();
                 customList.get(i).setId(id);
                 System.out.print("Nhập tên của khách hàng : ");
                 String name = scanner.nextLine();
                 customList.get(i).setName(name);
                 System.out.print("Nhập năm sinh của khách hàng : ");
-                int birthDay = Integer.parseInt(scanner.nextLine());
+                String birthDay = checkInput.checkBirthday();
                 customList.get(i).setBirthDay(birthDay);
                 System.out.print("Nhập giới tính của khách hàng : ");
                 String gender = scanner.nextLine();
                 customList.get(i).setGender(gender);
                 System.out.print("Nhập số chứng minh nhân dân của khách hàng : ");
-                int identityNum = Integer.parseInt(scanner.nextLine());
+                int identityNum = checkBug.checkNum();
                 customList.get(i).setIdentityCard(identityNum);
                 System.out.print("Nhập số điện thoại của khách hàng : ");
-                int phoneNum = Integer.parseInt(scanner.nextLine());
+                int phoneNum = checkBug.checkNum();
                 customList.get(i).setPhoneNumbers(phoneNum);
                 System.out.print("Nhập email của khách hàng : ");
                 String mail = scanner.nextLine();

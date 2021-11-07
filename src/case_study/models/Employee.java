@@ -8,7 +8,7 @@ public class Employee extends Person {
     public Employee(int id, int birthDay, String gender, int identityNum, int phoneNum, String mail, String level, String location, int wage) {
     }
 
-    public Employee(int id, String name, int birthDay, String gender, int identityCard, int phoneNumbers, String email, String level, String location, int wage) {
+    public Employee(int id, String name, String birthDay, String gender, int identityCard, int phoneNumbers, String email, String level, String location, int wage) {
         super(id, name, birthDay, gender, identityCard, phoneNumbers, email);
         this.level = level;
         this.location = location;

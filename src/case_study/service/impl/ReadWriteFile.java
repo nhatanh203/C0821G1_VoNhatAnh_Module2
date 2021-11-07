@@ -80,7 +80,7 @@ public class ReadWriteFile {
             String line;
             while ((line = bufferRd.readLine()) != null) {
                 String[] cust = line.split(",");
-                Customer cust1 = new Customer(Integer.parseInt(cust[0]),cust[1],Integer.parseInt(cust[2]),cust[3],Integer.parseInt(cust[4]),Integer.parseInt(cust[5]),cust[6],cust[7],cust[8]);
+                Customer cust1 = new Customer(Integer.parseInt(cust[0]),cust[1],cust[2],cust[3],Integer.parseInt(cust[4]),Integer.parseInt(cust[5]),cust[6],cust[7],cust[8]);
                 custList.add(cust1);
             }
             bufferRd.close();
@@ -98,7 +98,7 @@ public class ReadWriteFile {
             String line;
             while ((line = bufferRd.readLine()) != null) {
                 String[] empl = line.split(",");
-                Employee empl1 = new Employee(Integer.parseInt(empl[0]),empl[1],Integer.parseInt(empl[2]),empl[3],Integer.parseInt(empl[4]),Integer.parseInt(empl[5]),empl[6],empl[7],empl[8],Integer.parseInt(empl[9]));
+                Employee empl1 = new Employee(Integer.parseInt(empl[0]),empl[1],empl[2],empl[3],Integer.parseInt(empl[4]),Integer.parseInt(empl[5]),empl[6],empl[7],empl[8],Integer.parseInt(empl[9]));
                 empList.add(empl1);
             }
             bufferRd.close();

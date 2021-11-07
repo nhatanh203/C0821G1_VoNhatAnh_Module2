@@ -3,7 +3,7 @@ package case_study.models;
 public abstract class Person {
     private int id;
     private String name;
-    private int birthDay;
+    private String birthDay;
     private String gender;
     private int identityCard;
     private int phoneNumbers;
@@ -12,7 +12,7 @@ public abstract class Person {
     public Person() {
     }
 
-    public Person(int id, String name, int birthDay, String gender, int identityCard, int phoneNumbers, String email) {
+    public Person(int id, String name, String birthDay, String gender, int identityCard, int phoneNumbers, String email) {
         this.id = id;
         this.name = name;
         this.birthDay = birthDay;
@@ -38,11 +38,11 @@ public abstract class Person {
         this.name = name;
     }
 
-    public int getBirthDay() {
+    public String getBirthDay() {
         return birthDay;
     }
 
-    public void setBirthDay(int birthDay) {
+    public void setBirthDay(String birthDay) {
         this.birthDay = birthDay;
     }
 

@@ -11,21 +11,23 @@ public class EmployeeServiceImp implements EmployeeService {
     Scanner scanner = new Scanner(System.in);
     public static List<Employee> empList = new ArrayList<>();
     ReadWriteFile readWrite = new ReadWriteFile();
+    CheckBug checkBug = new CheckBug();
+    CheckInputImp checkInput = new CheckInputImp();
 
     @Override
     public void add() {
         System.out.print("Nhập id của nhân viên : ");
-        int id = Integer.parseInt(scanner.nextLine());
+        int id = checkBug.checkNum();
         System.out.print("Nhập tên của nhân viên : ");
         String name = scanner.nextLine();
-        System.out.print("Nhập năm sinh của nhân viên : ");
-        int birthDay = Integer.parseInt(scanner.nextLine());
+        System.out.print("Nhập ngày sinh của nhân viên : ");
+        String birthDay = checkInput.checkBirthday();
         System.out.print("Nhập giới tính của nhân viên : ");
         String gender = scanner.nextLine();
         System.out.print("Nhập số chứng minh nhân dân của nhân viên : ");
-        int identityNum = Integer.parseInt(scanner.nextLine());
+        int identityNum = checkBug.checkNum();
         System.out.print("Nhập số điện thoại của nhân viên : ");
-        int phoneNum = Integer.parseInt(scanner.nextLine());
+        int phoneNum = checkBug.checkNum();
         System.out.print("Nhập email của nhân viên : ");
         String mail = scanner.nextLine();
         System.out.print("Nhập trình độ của nhân viên : ");
@@ -50,29 +52,29 @@ public class EmployeeServiceImp implements EmployeeService {
     @Override
     public void edit() {
         System.out.print("Nhập vào mã nhân viên : ");
-        int codeId = Integer.parseInt(scanner.nextLine());
+        int codeId = checkBug.checkNum();
         boolean check = false;
         int size = empList.size();
         for (int i = 0; i < size; i++) {
             if (empList.get(i).getId() == codeId) {
                 check = true;
                 System.out.print("Nhập id muốn sửa : ");
-                int id = Integer.parseInt(scanner.nextLine());
+                int id = checkBug.checkNum();
                 empList.get(i).setId(id);
                 System.out.print("Nhập tên của nhân viên : ");
                 String name = scanner.nextLine();
                 empList.get(i).setName(name);
-                System.out.print("Nhập năm sinh của nhân viên : ");
-                int birthDay = Integer.parseInt(scanner.nextLine());
+                System.out.print("Nhập ngày sinh của nhân viên : ");
+                String birthDay = checkInput.checkBirthday();
                 empList.get(i).setBirthDay(birthDay);
                 System.out.print("Nhập giới tính của nhân viên : ");
                 String gender = scanner.nextLine();
                 empList.get(i).setGender(gender);
                 System.out.print("Nhập số chứng minh nhân dân của nhân viên : ");
-                int identityNum = Integer.parseInt(scanner.nextLine());
+                int identityNum = checkBug.checkNum();
                 empList.get(i).setIdentityCard(identityNum);
                 System.out.print("Nhập số điện thoại của nhân viên : ");
-                int phoneNum = Integer.parseInt(scanner.nextLine());
+                int phoneNum = checkBug.checkNum();
                 empList.get(i).setPhoneNumbers(phoneNum);
                 System.out.print("Nhập email của nhân viên : ");
                 String mail = scanner.nextLine();
